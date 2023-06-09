@@ -1,0 +1,3 @@
+variable "example" {
+    default = "test"
+}

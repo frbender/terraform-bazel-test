@@ -1,0 +1,14 @@
+load("@anotherbazeltest//rules_terraform:defs.bzl", "declare_terraform_toolchains")
+
+package(default_visibility = ["//visibility:public"])
+
+declare_terraform_toolchains(
+    version = "{version}",
+)
+
+# creates a target for the terraform binary
+filegroup(
+    name = "{name}",
+    srcs = ["terraform/terraform"],
+    visibility = ["//visibility:public"],
+)
